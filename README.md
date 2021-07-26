@@ -90,7 +90,7 @@ CONTAINER ID   IMAGE                     COMMAND                  CREATED       
 c21998d6dc5f   exercise-emily-w:latest   "java -jar /exercise…"   25 seconds ago   Up 24 seconds   0.0.0.0:8090->8090/tcp, :::8090->8090/tcp   exciting_pare
 ```
 
-From there you may use Curl or Postman to interact with the employee API program. When finished with the application you can close the terminal window with the where the build script was ran from.  Alternatively you can open a new window, run docker ps, find the ID, then docker kill the appropriate container ID.
+From there you may use Curl or Postman to interact with the employee API program. When finished with the application you can close the terminal window where the build script was ran from.  Alternatively you can open a new window, run docker ps, find the ID, then docker kill the appropriate container ID.
 
 
 
