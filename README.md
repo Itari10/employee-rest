@@ -10,6 +10,7 @@
  3. ADD EMPLOYEE [HTTP POST]
  4. UPDATE EMPLOYEE RECORD BY ID NUMBER [HTTP PUT]
 
+This set of functions are a proof of concept for this prototype; additional functionality could be added with time.
 The application is dockerized and runs on port 8090
 
 ⚠️ As the database used is in-memory, changes are not persistent across runs of the program.
@@ -94,5 +95,20 @@ From there you may use Curl or Postman to interact with the employee API program
 
 # Testing
 
-Basic unit testing was created for application functionality. Due to an inconsistency between the dockerization and maven build the `mvn test` command was removed from the build script and the tests commented. They can be manually uncommented in any Editor of your choice.
+Basic unit testing was created for application functionality via MockMVC. Due to an inconsistency between the dockerization and maven build the `mvn test` command was removed from the build script and the tests commented. They can be manually uncommented in any Editor of your choice and run separately. This set of quick tests are a proof of concept for this prototype; a more robust set of tests could be implemented with time.
+
+```
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.610 s
+[INFO] Finished at: 2021-07-25T23:48:58-04:00
+[INFO] ------------------------------------------------------------------------
+
+```
 
