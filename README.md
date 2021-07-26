@@ -92,5 +92,7 @@ c21998d6dc5f   exercise-emily-w:latest   "java -jar /exercise…"   25 seconds a
 
 From there you may use Curl or Postman to interact with the employee API program. When finished with the application you can close the terminal window where the build script was ran from.  Alternatively you can open a new window, run docker ps, find the ID, then docker kill the appropriate container ID.
 
+# Testing
 
+Basic unit testing was created for application functionality. Due to an inconsistency between the dockerization and maven build the `mvn test` command was removed from the build script and the tests commented. They can be manually uncommented in any Editor of your choice.
 
