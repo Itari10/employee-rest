@@ -29,6 +29,7 @@ curl  -s localhost:8090/employees | jq
     "lastName": "Fang",
     "role": "Squad Architect"
   },
+  
   {
     "id": 3,
     "firstName": "Todd",
@@ -59,7 +60,21 @@ curl -s --header "Content-Type: application/json" \
   
   {"id":4,"firstName":"Emily","lastName":"Winkleman","role":"Software Engineer"}
 ```
+ℹ️ ID is not needed, but can be added in the body. ID is used as a key and is auto-generated.
+Therefore it is ignored if given by the user.  
+
+## UPDATE EMPLOYEE RECORD BY ID NUMBER
+```
+curl -s --header "Content-Type: application/json" \
+  --request PUT \
+  --data '{"firstName":"Emily","lastName":"Winkleman","role":"Software Engineer II"}' \
+  localhost:8090/employees/4
   
+  {"id":4,"firstName":"Emily","lastName":"Winkleman","role":"Software Engineer II"}
+```
+ℹ️ UPDATE EMPLOYEE implemented as a PUT `not` a PATCH method so all the data fields should be provided in the same 
+manner as ADD EMPLOYEE. 
+
 # Installation
 
 Issue the command `git clone https://github.com/Itari10/employee-rest` to clone this repository to a Linux system with Docker installed. 
