@@ -13,7 +13,7 @@ package example;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 //
 //import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
+//
 //@RunWith(SpringRunner.class)
 //@WebMvcTest(EmployeeController.class)
 public class EmployeeControllerTest {
@@ -36,24 +36,6 @@ public class EmployeeControllerTest {
 //        }
 //    }
 //	
-////	@Test
-////	public void getInvalidEmployee() throws Exception{
-////		Employee e = new Employee("1", "1", "1");
-////		Mockito.when(service.findEmployeeById(99)).thenReturn(e);
-////		if() {
-////			
-////		}
-//		
-////		mock.perform(MockMvcRequestBuilders.get("/employees/{id}", 99)
-////					.contentType(MediaType.APPLICATION_JSON))
-////		.andDo(MockMvcResultHandlers.print())
-//////		.andExpect(status().reason("ID given is invalid"))
-////		.andExpect(status().is(500))
-////		.andReturn();
-//////		.andExpect(result -> assertTrue(result.getResolvedException() instanceof IllegalArgumentException))
-//////	    .andExpect(result -> assertEquals("ID given is invalid", result.getResolvedException().getMessage()));
-////	}
-//	
 //	@Test
 //	public void addEmployee() throws Exception{
 //		Employee e = new Employee("Test", "Add", "Role");
@@ -70,20 +52,16 @@ public class EmployeeControllerTest {
 //		addEmployee();
 //		mock.perform(MockMvcRequestBuilders.get("/employees/{id}", 2))
 //		.andExpect(status().isOk());
-//		//verify #2 info
 //	}
-	
+//	
 //	@Test
 //	public void updateEmployee() throws Exception{
-//		Employee add = new Employee("Add", "Add", "Add");
-//		service.addEmployee(add);
 //		Employee upd = new Employee("Update", "Update", "Update");
-//		assertTrue( service.updateEmployee(upd, 1) != null);
 //		
-////		Mockito.when(service.updateEmployee(e, 1)).thenReturn(e);
-////		mock.perform( MockMvcRequestBuilders.post("/employees")
-////				.content( asJsonString(e) )
-////				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON) )
-////		.andExpect(status().isOk());
+//		Mockito.when(service.updateEmployee(upd, 1)).thenReturn(upd);
+//		mock.perform( MockMvcRequestBuilders.post("/employees")
+//				.content( asJsonString(upd) )
+//				.contentType(MediaType.APPLICATION_JSON).accept(MediaType.APPLICATION_JSON) )
+//		.andExpect(status().isOk());
 //	}
 }
