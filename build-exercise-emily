@@ -1,0 +1,24 @@
+#!/bin/env bash
+
+echo "Build Script: creates docker image and runs as container"
+echo "Creating snapshot jar . . ."
+mvn clean package
+if [ $? -eq 0 ]; then
+	echo "Maven clean command success"
+else
+	echo "Maven clean command failed. Exiting . . ."
+	exit 1
+fi
+
+
+echo "Building docker image . . ."
+docker build --tag=exercise-emily-w:latest .
+if [ $? -eq 0 ]; then
+	echo "Docker image build success"
+else
+	echo "Docker image build failed. Exiting . . ."
+	exit 1
+fi
+
+echo "Running container . . ."
+docker run -p 8090:8090 exercise-emily-w:latest

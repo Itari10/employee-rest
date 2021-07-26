@@ -1,0 +1,21 @@
+#!/bin/env bash
+
+echo "Cleaning up docker in it's entirety.  All containers and images will be removed"
+read -r -p "Do you want to continue? [y/N] " response
+case "$response" in
+    [yY][eE][sS]|[yY]) 
+        echo "Docker will be purged"
+        ;;
+    *)
+        exit 1
+        ;;
+esac
+
+
+echo "Cleaning out docker"
+docker kill $(docker ps -q)
+docker rm -f $(docker ps -a -q)
+docker rmi $(docker images -q -f dangling=true)
+docker rmi $(docker images -q)
+docker volume rm $(docker volume ls -q)
+
